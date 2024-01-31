@@ -4,6 +4,7 @@
 
 
 import openpyxl
+from PIL import Image, ImageDraw, ImageFont
 
 workbook_alunos = openpyxl.load_workbook('planilha_alunos.xlsx')
 
@@ -17,3 +18,9 @@ for linha in sheet_alunos.iter_rows(min_row=2):
     data_final = linha[4].value
     carga_horario = linha[5].value
     data_emissao = linha[6].value
+
+    fonte_nome = ImageFont.truetype('./tahomabd.ttf')
+    fonte_geral = ImageFont.truetype('./tahoma.ttf')
+
+    image = Image.open('./certificado_padrao.jpg')
+    desenhar = ImageDraw.Draw(image)
