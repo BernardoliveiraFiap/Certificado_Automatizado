@@ -31,4 +31,9 @@ for indice, linha in enumerate(sheet_alunos.iter_rows(min_row=2,max_row=2)):
     desenhar.text((1435,1065),tipo_participante, fill='black',font=fonte_geral)
     desenhar.text((1480, 1182),str(carga_horario), fill='black',font=fonte_geral)
 
+    desenhar.text((750, 1770),data_inicio,fill='blue',font=fonte_data)
+    desenhar.text((750, 1930),data_final,fill='blue',font=fonte_data)
+
+    desenhar.text((2220, 1930),data_emissao,fill='blue',font=fonte_data)
+
     image.save(f'./{indice}{nome_participante}certificado.png')
