@@ -18,10 +18,10 @@ for indice, linha in enumerate(sheet_alunos.iter_rows(min_row=2,max_row=2)):
     data_final = linha[4].value
     carga_horario = linha[5].value
     data_emissao = linha[6].value
-
-    fonte_nome = ImageFont.truetype('./tahomabd.ttf',90)
-    fonte_geral = ImageFont.truetype('./tahoma.ttf',80)
-    fonte_data
+ 
+    fonte_nome = ImageFont.truetype('./tahomabd.ttf', 90)
+    fonte_geral = ImageFont.truetype('./tahoma.ttf', 80)
+    fonte_data = ImageFont.truetype('./tahoma.ttf', 55)
 
     image = Image.open('./certificado_padrao.jpg')
     desenhar = ImageDraw.Draw(image)
