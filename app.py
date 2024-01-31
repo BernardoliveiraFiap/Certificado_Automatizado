@@ -1,8 +1,3 @@
-
-
-
-
-
 import openpyxl
 from PIL import Image, ImageDraw, ImageFont
 
@@ -10,7 +5,7 @@ workbook_alunos = openpyxl.load_workbook('planilha_alunos.xlsx')
 
 sheet_alunos = workbook_alunos['Sheet1']
 
-for indice, linha in enumerate(sheet_alunos.iter_rows(min_row=2,max_row=2)):
+for indice, linha in enumerate(sheet_alunos.iter_rows(min_row=2)):
     nome_curso = linha[0].value
     nome_participante = linha[1].value
     tipo_participante = linha[2].value
